@@ -1,0 +1,101 @@
+
+# # Person
+
+
+input EmbedPersonFilter {
+  or: [EmbedPersonFilterItem]
+  and: [EmbedPersonFilterItem]
+  some: PersonFilter
+  none: PersonFilter
+  every: PersonFilter
+}
+
+input EmbedPersonFilterItem {
+  some: PersonFilter
+  none: PersonFilter
+  every: PersonFilter
+}
+
+input PersonFilter {
+  or: [PersonFilterItem]
+  and: [PersonFilterItem]
+  spiritualName: WhereString
+  fullName: WhereString
+  dateOfBirth: WhereDate
+  ages: WhereFloat
+  user: WhereID
+  specialNotes: WhereString
+  id: WhereID
+}
+
+input PersonComplexFilter {
+  or: [PersonComplexFilter]
+  and: [PersonComplexFilter]
+  spiritualName: WhereString
+  fullName: WhereString
+  dateOfBirth: WhereDate
+  ages: WhereFloat
+  user: WhereID
+  specialNotes: WhereString
+  id: WhereID
+}
+
+input PersonFilterItem {
+  spiritualName: WhereString
+  fullName: WhereString
+  dateOfBirth: WhereDate
+  ages: WhereFloat
+  user: WhereID
+  specialNotes: WhereString
+  id: WhereID
+}
+
+input PersonFilterSubscriptionsItem {
+  spiritualName: WhereString
+  fullName: WhereString
+  dateOfBirth: WhereDate
+  ages: WhereFloat
+  user: WhereID
+  specialNotes: WhereString
+  id: WhereID
+}
+
+input PersonFilterSubscriptions {
+  or: [PersonFilterSubscriptions]
+  and: [PersonFilterSubscriptions]
+  mutation: WhereMutationKind
+  node: PersonFilterSubscriptionsItem
+  previous: PersonFilterSubscriptionsItem
+  updatedFields: WhereListOfStrings
+}
+
+type Person implements Node{
+  # # Spiritual Name
+  spiritualName: String!
+  # # Full Name
+  fullName: String!
+  # # Date Of Birth
+  dateOfBirth: Date
+  # # Ages
+  ages: Float
+  # # Special Notes
+  specialNotes: String
+  # # Id
+  id: ID!
+  # # User
+  user: User
+
+  # # Social Networks  
+  socialNetworks(after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [SocialNetworkSortOrder], filter:SocialNetworkComplexFilter ): PersonHasManySocialNetworksConnection  
+  # # Phones  
+  phones(after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [PhoneSortOrder], filter:PhoneComplexFilter ): PersonHasManyPhonesConnection  
+  # # Emails  
+  emails(after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [EmailSortOrder], filter:EmailComplexFilter ): PersonHasManyEmailsConnection  
+  # # As Students  
+  asStudents(after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [StudentSortOrder], filter:StudentComplexFilter ): PersonHasManyAsStudentsConnection  
+  # # As Curator
+  asCurator: Curator
+
+}
+
+

@@ -1,0 +1,6 @@
+
+query findPhoneTypeById( $id: ID) {
+  phoneType(id:$id) {
+    ...ViewPhoneTypeFull
+  }
+}

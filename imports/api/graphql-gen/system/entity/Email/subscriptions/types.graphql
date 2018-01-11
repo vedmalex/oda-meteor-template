@@ -1,0 +1,39 @@
+# Input types for basic CUD
+
+# input type for Email
+
+type UpdateEmailSubscriptionPayload {
+
+  id: ID
+  email: String
+}
+
+type EmailSubscription {
+  mutation: MutationKind!
+  node: Email!
+  payload: EmailSubscriptionPayload
+  updatedFields: [String]
+  previous: UpdateEmailSubscriptionPayload
+}
+
+type EmailBelongsToTypeArgsSubscriptionPayload {
+  email:ID!
+  emailType:ID!
+}
+
+type EmailBelongsToTypeSubscriptionPayload {
+  args:EmailBelongsToTypeArgsSubscriptionPayload
+  relation: String
+}
+
+type EmailBelongsToPersonArgsSubscriptionPayload {
+  email:ID!
+  person:ID!
+}
+
+type EmailBelongsToPersonSubscriptionPayload {
+  args:EmailBelongsToPersonArgsSubscriptionPayload
+  relation: String
+}
+
+union EmailSubscriptionPayload = UpdateEmailSubscriptionPayload | EmailBelongsToTypeSubscriptionPayload | EmailBelongsToPersonSubscriptionPayload

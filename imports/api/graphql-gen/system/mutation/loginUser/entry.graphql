@@ -1,0 +1,1 @@
+loginUser(input: loginUserInput!): loginUserPayload

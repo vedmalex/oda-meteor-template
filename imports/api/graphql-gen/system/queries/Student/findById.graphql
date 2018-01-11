@@ -1,0 +1,6 @@
+
+query findStudentById( $id: ID) {
+  student(id:$id) {
+    ...ViewStudentFull
+  }
+}

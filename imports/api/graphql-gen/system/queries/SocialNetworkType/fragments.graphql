@@ -1,0 +1,22 @@
+
+# fragments for single unique keys
+fragment EmbedSocialNetworkTypeWithId on SocialNetworkType {
+  id
+}
+fragment EmbedSocialNetworkTypeWithName on SocialNetworkType {
+  name
+}
+
+
+# fragments on entity
+fragment ViewSocialNetworkType on SocialNetworkType {
+  id
+  name
+}
+
+fragment ViewSocialNetworkTypeFull on SocialNetworkType {
+  id
+  name
+}
+
+

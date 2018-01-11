@@ -1,0 +1,4 @@
+enum StudentSortOrder {
+  idAsc
+  idDesc
+}

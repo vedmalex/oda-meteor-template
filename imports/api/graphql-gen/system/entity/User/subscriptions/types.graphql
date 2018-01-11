@@ -1,0 +1,21 @@
+# Input types for basic CUD
+
+# input type for User
+
+type UserSubscriptionPayload {
+
+  id: ID
+  userName: String
+  password: String
+  isAdmin: Boolean
+  isSystem: Boolean
+  enabled: Boolean
+}
+
+type UserSubscription {
+  mutation: MutationKind!
+  node: User!
+  payload: UserSubscriptionPayload
+  updatedFields: [String]
+  previous: UserSubscriptionPayload
+}

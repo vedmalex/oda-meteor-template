@@ -1,0 +1,6 @@
+
+query findEmailById( $id: ID) {
+  email(id:$id) {
+    ...ViewEmailFull
+  }
+}

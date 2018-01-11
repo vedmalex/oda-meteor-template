@@ -1,0 +1,38 @@
+# Input types for basic CUD
+
+# input type for Curator
+
+type UpdateCuratorSubscriptionPayload {
+
+  id: ID
+}
+
+type CuratorSubscription {
+  mutation: MutationKind!
+  node: Curator!
+  payload: CuratorSubscriptionPayload
+  updatedFields: [String]
+  previous: UpdateCuratorSubscriptionPayload
+}
+
+type CuratorBelongsToPersonArgsSubscriptionPayload {
+  curator:ID!
+  person:ID!
+}
+
+type CuratorBelongsToPersonSubscriptionPayload {
+  args:CuratorBelongsToPersonArgsSubscriptionPayload
+  relation: String
+}
+
+type CuratorHasManyGroupsArgsSubscriptionPayload {
+  curator:ID!
+  group:ID!
+}
+
+type CuratorHasManyGroupsSubscriptionPayload {
+  args:CuratorHasManyGroupsArgsSubscriptionPayload
+  relation: String
+}
+
+union CuratorSubscriptionPayload = UpdateCuratorSubscriptionPayload | CuratorBelongsToPersonSubscriptionPayload | CuratorHasManyGroupsSubscriptionPayload

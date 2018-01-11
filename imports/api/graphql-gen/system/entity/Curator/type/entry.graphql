@@ -1,0 +1,62 @@
+
+# # Person Role To Be Curator
+
+
+input EmbedCuratorFilter {
+  or: [EmbedCuratorFilterItem]
+  and: [EmbedCuratorFilterItem]
+  some: CuratorFilter
+  none: CuratorFilter
+  every: CuratorFilter
+}
+
+input EmbedCuratorFilterItem {
+  some: CuratorFilter
+  none: CuratorFilter
+  every: CuratorFilter
+}
+
+input CuratorFilter {
+  or: [CuratorFilterItem]
+  and: [CuratorFilterItem]
+  person: WhereID
+  id: WhereID
+}
+
+input CuratorComplexFilter {
+  or: [CuratorComplexFilter]
+  and: [CuratorComplexFilter]
+  person: WhereID
+  id: WhereID
+}
+
+input CuratorFilterItem {
+  person: WhereID
+  id: WhereID
+}
+
+input CuratorFilterSubscriptionsItem {
+  person: WhereID
+  id: WhereID
+}
+
+input CuratorFilterSubscriptions {
+  or: [CuratorFilterSubscriptions]
+  and: [CuratorFilterSubscriptions]
+  mutation: WhereMutationKind
+  node: CuratorFilterSubscriptionsItem
+  previous: CuratorFilterSubscriptionsItem
+  updatedFields: WhereListOfStrings
+}
+
+type Curator implements Node{
+  # # Id
+  id: ID!
+  # # Person
+  person: Person
+
+  # # Groups  
+  groups(after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [GroupSortOrder], filter:GroupComplexFilter ): CuratorHasManyGroupsConnection  
+}
+
+

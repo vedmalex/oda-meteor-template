@@ -1,0 +1,10 @@
+
+# Update PhoneType
+mutation updatePhoneType($phoneType: updatePhoneTypeInput!){
+  updatePhoneType(input:$phoneType){
+    phoneType {
+      id
+    }
+  }
+}
+

@@ -1,0 +1,6 @@
+
+query findGroupById( $id: ID) {
+  group(id:$id) {
+    ...ViewGroupFull
+  }
+}

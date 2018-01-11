@@ -1,0 +1,56 @@
+# Input types for basic CUD
+
+# input type for Curator
+input createCuratorInput {
+  clientMutationId: String
+  id: ID
+  person: embedPersonInput
+  groups: [embedGroupInput]
+}
+
+input embedCuratorInput {
+  clientMutationId: String
+  id: ID
+  person: embedPersonInput
+  groups: [embedGroupInput]
+}
+
+# Payload type for Curator
+type createCuratorPayload {
+  clientMutationId: String
+  viewer: Viewer
+  curator: CuratorsEdge
+}
+
+# input type for Curator
+input updateCuratorInput {
+  clientMutationId: String
+  id: ID
+  person: embedPersonInput
+  personUnlink: embedPersonInput
+  personCreate: createPersonInput
+  groups: [embedGroupInput]
+  groupsUnlink: [embedGroupInput]
+  groupsCreate: [createGroupInput]
+}
+
+# Payload type for Curator
+type updateCuratorPayload {
+  clientMutationId: String
+  viewer: Viewer
+  curator: Curator
+}
+
+# input type for Curator
+input deleteCuratorInput {
+  clientMutationId: String
+  id: ID
+}
+
+# Payload type for Curator
+type deleteCuratorPayload {
+  clientMutationId: String
+  viewer: Viewer
+  deletedItemId: ID
+  curator: Curator
+}

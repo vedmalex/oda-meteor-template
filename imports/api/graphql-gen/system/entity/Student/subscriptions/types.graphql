@@ -1,0 +1,38 @@
+# Input types for basic CUD
+
+# input type for Student
+
+type UpdateStudentSubscriptionPayload {
+
+  id: ID
+}
+
+type StudentSubscription {
+  mutation: MutationKind!
+  node: Student!
+  payload: StudentSubscriptionPayload
+  updatedFields: [String]
+  previous: UpdateStudentSubscriptionPayload
+}
+
+type StudentBelongsToPersonArgsSubscriptionPayload {
+  student:ID!
+  person:ID!
+}
+
+type StudentBelongsToPersonSubscriptionPayload {
+  args:StudentBelongsToPersonArgsSubscriptionPayload
+  relation: String
+}
+
+type StudentBelongsToGroupArgsSubscriptionPayload {
+  student:ID!
+  group:ID!
+}
+
+type StudentBelongsToGroupSubscriptionPayload {
+  args:StudentBelongsToGroupArgsSubscriptionPayload
+  relation: String
+}
+
+union StudentSubscriptionPayload = UpdateStudentSubscriptionPayload | StudentBelongsToPersonSubscriptionPayload | StudentBelongsToGroupSubscriptionPayload

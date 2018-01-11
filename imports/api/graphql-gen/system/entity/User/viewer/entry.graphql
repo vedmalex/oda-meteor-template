@@ -1,0 +1,2 @@
+  users( after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [UserSortOrder], filter: UserFilter): UsersConnection
+  user(id: ID, userName: String): User

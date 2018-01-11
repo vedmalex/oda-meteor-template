@@ -1,0 +1,4 @@
+enum CuratorSortOrder {
+  idAsc
+  idDesc
+}

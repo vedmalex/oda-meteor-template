@@ -1,0 +1,30 @@
+{
+  "name": "oda-admin-on-rest-meteor",
+  "private": true,
+  "scripts": {
+    "start": "MONGO_URL==mongodb://localhost:27017/meteordev meteor run -p 3333"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "meteor-node-stubs": "~0.2.4",
+    "admin-on-rest": "^1.3.2",
+    "aor-dependent-input": "^1.2.0",
+    "aor-embedded-array": "0.0.3",
+    "aor-language-russian": "^1.0.6",
+    "aor-rich-text-input": "^1.0.2",
+    "apollo-link-batch-http": "^1.0.1",
+    "compose": "^0.1.2",
+    "dotenv": "^4.0.0",
+    "graphql-tag": "^2.6.1",
+    "inflected": "^2.0.3",
+    "invariant": "^2.2.2",
+    "loadable-components": "^0.4.0",
+    "oda-aor-rest": "0.1.24",
+    "oda-gen-graphql": "^0.4.77",
+    "pluralize": "^7.0.0",
+    "react": "^15.6.0",
+    "react-apollo": "^2.0.1",
+    "react-dom": "^15.6.0",
+    "react-loading-animation": "^1.4.0"
+  }
+}

@@ -1,0 +1,62 @@
+# Input types for basic CUD
+
+# input type for User
+input createUserInput {
+  clientMutationId: String
+  id: ID
+  userName: String!
+  password: String!
+  isAdmin: Boolean
+  isSystem: Boolean
+  enabled: Boolean
+}
+
+input embedUserInput {
+  clientMutationId: String
+  id: ID
+  userName: String
+  password: String
+  isAdmin: Boolean
+  isSystem: Boolean
+  enabled: Boolean
+}
+
+# Payload type for User
+type createUserPayload {
+  clientMutationId: String
+  viewer: Viewer
+  user: UsersEdge
+}
+
+# input type for User
+input updateUserInput {
+  clientMutationId: String
+  id: ID
+  userName: String
+  password: String
+  isAdmin: Boolean
+  isSystem: Boolean
+  enabled: Boolean
+}
+
+# Payload type for User
+type updateUserPayload {
+  clientMutationId: String
+  viewer: Viewer
+  user: User
+}
+
+# input type for User
+input deleteUserInput {
+  clientMutationId: String
+  id: ID
+  userName: String
+}
+
+# Payload type for User
+type deleteUserPayload {
+  clientMutationId: String
+  viewer: Viewer
+  deletedItemId: ID
+  user: User
+}

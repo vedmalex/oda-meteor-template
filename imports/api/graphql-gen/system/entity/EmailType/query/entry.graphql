@@ -1,0 +1,3 @@
+  emailTypes( after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [EmailTypeSortOrder], filter: EmailTypeComplexFilter): EmailTypesConnection
+
+  emailType(id: ID, name: String): EmailType

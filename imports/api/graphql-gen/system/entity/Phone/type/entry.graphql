@@ -1,0 +1,73 @@
+
+# # Phone
+
+
+input EmbedPhoneFilter {
+  or: [EmbedPhoneFilterItem]
+  and: [EmbedPhoneFilterItem]
+  some: PhoneFilter
+  none: PhoneFilter
+  every: PhoneFilter
+}
+
+input EmbedPhoneFilterItem {
+  some: PhoneFilter
+  none: PhoneFilter
+  every: PhoneFilter
+}
+
+input PhoneFilter {
+  or: [PhoneFilterItem]
+  and: [PhoneFilterItem]
+  phoneNumber: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input PhoneComplexFilter {
+  or: [PhoneComplexFilter]
+  and: [PhoneComplexFilter]
+  phoneNumber: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input PhoneFilterItem {
+  phoneNumber: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input PhoneFilterSubscriptionsItem {
+  phoneNumber: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input PhoneFilterSubscriptions {
+  or: [PhoneFilterSubscriptions]
+  and: [PhoneFilterSubscriptions]
+  mutation: WhereMutationKind
+  node: PhoneFilterSubscriptionsItem
+  previous: PhoneFilterSubscriptionsItem
+  updatedFields: WhereListOfStrings
+}
+
+type Phone implements Node{
+  # # Phone Number
+  phoneNumber: String!
+  # # Id
+  id: ID!
+  # # Type
+  type: PhoneType
+
+  # # Person
+  person: Person
+
+}
+
+

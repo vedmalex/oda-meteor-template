@@ -1,0 +1,6 @@
+
+query findEmailTypeByName( $name: String) {
+  emailType(name:$name) {
+    ...ViewEmailTypeFull
+  }
+}

@@ -1,0 +1,68 @@
+
+# # Group
+
+
+input EmbedGroupFilter {
+  or: [EmbedGroupFilterItem]
+  and: [EmbedGroupFilterItem]
+  some: GroupFilter
+  none: GroupFilter
+  every: GroupFilter
+}
+
+input EmbedGroupFilterItem {
+  some: GroupFilter
+  none: GroupFilter
+  every: GroupFilter
+}
+
+input GroupFilter {
+  or: [GroupFilterItem]
+  and: [GroupFilterItem]
+  name: WhereString
+  curator: WhereID
+  id: WhereID
+}
+
+input GroupComplexFilter {
+  or: [GroupComplexFilter]
+  and: [GroupComplexFilter]
+  name: WhereString
+  curator: WhereID
+  id: WhereID
+}
+
+input GroupFilterItem {
+  name: WhereString
+  curator: WhereID
+  id: WhereID
+}
+
+input GroupFilterSubscriptionsItem {
+  name: WhereString
+  curator: WhereID
+  id: WhereID
+}
+
+input GroupFilterSubscriptions {
+  or: [GroupFilterSubscriptions]
+  and: [GroupFilterSubscriptions]
+  mutation: WhereMutationKind
+  node: GroupFilterSubscriptionsItem
+  previous: GroupFilterSubscriptionsItem
+  updatedFields: WhereListOfStrings
+}
+
+type Group implements Node{
+  # # Name
+  name: String!
+  # # Id
+  id: ID!
+  # # Students  
+  students(after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [StudentSortOrder], filter:StudentComplexFilter ): GroupHasManyStudentsConnection  
+  # # Curator
+  curator: Curator
+
+}
+
+

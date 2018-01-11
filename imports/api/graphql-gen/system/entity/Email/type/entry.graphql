@@ -1,0 +1,73 @@
+
+# # Email
+
+
+input EmbedEmailFilter {
+  or: [EmbedEmailFilterItem]
+  and: [EmbedEmailFilterItem]
+  some: EmailFilter
+  none: EmailFilter
+  every: EmailFilter
+}
+
+input EmbedEmailFilterItem {
+  some: EmailFilter
+  none: EmailFilter
+  every: EmailFilter
+}
+
+input EmailFilter {
+  or: [EmailFilterItem]
+  and: [EmailFilterItem]
+  email: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input EmailComplexFilter {
+  or: [EmailComplexFilter]
+  and: [EmailComplexFilter]
+  email: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input EmailFilterItem {
+  email: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input EmailFilterSubscriptionsItem {
+  email: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input EmailFilterSubscriptions {
+  or: [EmailFilterSubscriptions]
+  and: [EmailFilterSubscriptions]
+  mutation: WhereMutationKind
+  node: EmailFilterSubscriptionsItem
+  previous: EmailFilterSubscriptionsItem
+  updatedFields: WhereListOfStrings
+}
+
+type Email implements Node{
+  # # Email
+  email: String!
+  # # Id
+  id: ID!
+  # # Type
+  type: EmailType
+
+  # # Person
+  person: Person
+
+}
+
+

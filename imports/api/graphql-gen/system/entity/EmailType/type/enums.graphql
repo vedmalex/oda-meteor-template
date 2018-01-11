@@ -1,0 +1,6 @@
+enum EmailTypeSortOrder {
+  nameAsc
+  nameDesc
+  idAsc
+  idDesc
+}

@@ -1,0 +1,13 @@
+type EmailsConnection {
+  pageInfo: PageInfo!
+  edges: [EmailsEdge]
+  # put here your additional connection fields
+}
+
+type EmailsEdge {
+  node: Email
+  cursor: String!
+  # put here your additiona edge fields
+}
+
+

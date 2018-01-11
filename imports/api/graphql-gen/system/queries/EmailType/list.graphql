@@ -1,0 +1,12 @@
+
+# List of EmailTypes
+query EmailTypes {
+  EmailType: emailTypes @_(get: "edges"){
+    edges @_(map: "node"){
+      node{
+        ...ViewEmailTypeFull
+      }
+    }
+  }
+}
+

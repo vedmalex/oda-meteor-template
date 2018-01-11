@@ -1,0 +1,3 @@
+  socialNetworks( after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [SocialNetworkSortOrder], filter: SocialNetworkComplexFilter): SocialNetworksConnection
+
+  socialNetwork(id: ID, account: String): SocialNetwork

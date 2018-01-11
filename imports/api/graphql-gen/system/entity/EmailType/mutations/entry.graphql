@@ -1,0 +1,3 @@
+createEmailType(input: createEmailTypeInput!): createEmailTypePayload
+updateEmailType(input: updateEmailTypeInput!): updateEmailTypePayload
+deleteEmailType(input: deleteEmailTypeInput!): deleteEmailTypePayload

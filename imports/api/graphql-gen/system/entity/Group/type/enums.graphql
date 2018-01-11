@@ -1,0 +1,6 @@
+enum GroupSortOrder {
+  nameAsc
+  nameDesc
+  idAsc
+  idDesc
+}

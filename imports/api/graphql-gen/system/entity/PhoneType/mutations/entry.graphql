@@ -1,0 +1,3 @@
+createPhoneType(input: createPhoneTypeInput!): createPhoneTypePayload
+updatePhoneType(input: updatePhoneTypeInput!): updatePhoneTypePayload
+deletePhoneType(input: deletePhoneTypeInput!): deletePhoneTypePayload

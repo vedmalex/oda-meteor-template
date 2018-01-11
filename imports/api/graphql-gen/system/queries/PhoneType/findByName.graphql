@@ -1,0 +1,6 @@
+
+query findPhoneTypeByName( $name: String) {
+  phoneType(name:$name) {
+    ...ViewPhoneTypeFull
+  }
+}

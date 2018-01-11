@@ -1,0 +1,3 @@
+  emails( after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [EmailSortOrder], filter: EmailComplexFilter): EmailsConnection
+
+  email(id: ID, email: String): Email

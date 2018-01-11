@@ -1,0 +1,22 @@
+
+# fragments for single unique keys
+fragment EmbedEmailTypeWithId on EmailType {
+  id
+}
+fragment EmbedEmailTypeWithName on EmailType {
+  name
+}
+
+
+# fragments on entity
+fragment ViewEmailType on EmailType {
+  id
+  name
+}
+
+fragment ViewEmailTypeFull on EmailType {
+  id
+  name
+}
+
+

@@ -1,0 +1,3 @@
+  phones( after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [PhoneSortOrder], filter: PhoneComplexFilter): PhonesConnection
+
+  phone(id: ID, phoneNumber: String): Phone

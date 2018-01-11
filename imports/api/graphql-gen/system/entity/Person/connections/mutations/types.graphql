@@ -1,0 +1,150 @@
+
+input addToPersonBelongsToUserInput {
+  clientMutationId: String
+  person:ID!
+  user:ID!
+  #additional Edge fields
+}
+
+type addToPersonBelongsToUserPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input removeFromPersonBelongsToUserInput {
+  clientMutationId: String
+  user:ID!
+  person:ID!
+ }
+
+type removeFromPersonBelongsToUserPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input addToPersonHasManySocialNetworksInput {
+  clientMutationId: String
+  person:ID!
+  socialNetwork:ID!
+  #additional Edge fields
+}
+
+type addToPersonHasManySocialNetworksPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input removeFromPersonHasManySocialNetworksInput {
+  clientMutationId: String
+  socialNetwork:ID!
+  person:ID!
+ }
+
+type removeFromPersonHasManySocialNetworksPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input addToPersonHasManyPhonesInput {
+  clientMutationId: String
+  person:ID!
+  phone:ID!
+  #additional Edge fields
+}
+
+type addToPersonHasManyPhonesPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input removeFromPersonHasManyPhonesInput {
+  clientMutationId: String
+  phone:ID!
+  person:ID!
+ }
+
+type removeFromPersonHasManyPhonesPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input addToPersonHasManyEmailsInput {
+  clientMutationId: String
+  person:ID!
+  email:ID!
+  #additional Edge fields
+}
+
+type addToPersonHasManyEmailsPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input removeFromPersonHasManyEmailsInput {
+  clientMutationId: String
+  email:ID!
+  person:ID!
+ }
+
+type removeFromPersonHasManyEmailsPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input addToPersonHasManyAsStudentsInput {
+  clientMutationId: String
+  person:ID!
+  student:ID!
+  #additional Edge fields
+}
+
+type addToPersonHasManyAsStudentsPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input removeFromPersonHasManyAsStudentsInput {
+  clientMutationId: String
+  student:ID!
+  person:ID!
+ }
+
+type removeFromPersonHasManyAsStudentsPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input addToPersonHasOneAsCuratorInput {
+  clientMutationId: String
+  person:ID!
+  curator:ID!
+  #additional Edge fields
+}
+
+type addToPersonHasOneAsCuratorPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }
+
+input removeFromPersonHasOneAsCuratorInput {
+  clientMutationId: String
+  curator:ID!
+  person:ID!
+ }
+
+type removeFromPersonHasOneAsCuratorPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+ }

@@ -1,0 +1,3 @@
+createEmail(input: createEmailInput!): createEmailPayload
+updateEmail(input: updateEmailInput!): updateEmailPayload
+deleteEmail(input: deleteEmailInput!): deleteEmailPayload

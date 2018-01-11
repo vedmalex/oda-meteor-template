@@ -1,0 +1,79 @@
+
+# # Social Network
+
+
+input EmbedSocialNetworkFilter {
+  or: [EmbedSocialNetworkFilterItem]
+  and: [EmbedSocialNetworkFilterItem]
+  some: SocialNetworkFilter
+  none: SocialNetworkFilter
+  every: SocialNetworkFilter
+}
+
+input EmbedSocialNetworkFilterItem {
+  some: SocialNetworkFilter
+  none: SocialNetworkFilter
+  every: SocialNetworkFilter
+}
+
+input SocialNetworkFilter {
+  or: [SocialNetworkFilterItem]
+  and: [SocialNetworkFilterItem]
+  account: WhereString
+  url: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input SocialNetworkComplexFilter {
+  or: [SocialNetworkComplexFilter]
+  and: [SocialNetworkComplexFilter]
+  account: WhereString
+  url: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input SocialNetworkFilterItem {
+  account: WhereString
+  url: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input SocialNetworkFilterSubscriptionsItem {
+  account: WhereString
+  url: WhereString
+  type: WhereString
+  person: WhereID
+  id: WhereID
+}
+
+input SocialNetworkFilterSubscriptions {
+  or: [SocialNetworkFilterSubscriptions]
+  and: [SocialNetworkFilterSubscriptions]
+  mutation: WhereMutationKind
+  node: SocialNetworkFilterSubscriptionsItem
+  previous: SocialNetworkFilterSubscriptionsItem
+  updatedFields: WhereListOfStrings
+}
+
+type SocialNetwork implements Node{
+  # # Account
+  account: String!
+  # # Url
+  url: String
+  # # Id
+  id: ID!
+  # # Type
+  type: SocialNetworkType
+
+  # # Person
+  person: Person
+
+}
+
+

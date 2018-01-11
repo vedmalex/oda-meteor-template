@@ -1,0 +1,26 @@
+type GroupsConnection {
+  pageInfo: PageInfo!
+  edges: [GroupsEdge]
+  # put here your additional connection fields
+}
+
+type GroupsEdge {
+  node: Group
+  cursor: String!
+  # put here your additiona edge fields
+}
+
+
+
+type GroupHasManyStudentsConnection {
+  pageInfo: PageInfo!
+  edges: [GroupHasManyStudentsEdge]
+  # put here your additional connection fields
+}
+
+type GroupHasManyStudentsEdge {
+  node: Student
+  cursor: String!
+  # put here your additiona edge fields
+}
+

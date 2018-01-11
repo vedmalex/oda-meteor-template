@@ -1,0 +1,56 @@
+# Input types for basic CUD
+
+# input type for Student
+input createStudentInput {
+  clientMutationId: String
+  id: ID
+  person: embedPersonInput
+  group: embedGroupInput
+}
+
+input embedStudentInput {
+  clientMutationId: String
+  id: ID
+  person: embedPersonInput
+  group: embedGroupInput
+}
+
+# Payload type for Student
+type createStudentPayload {
+  clientMutationId: String
+  viewer: Viewer
+  student: StudentsEdge
+}
+
+# input type for Student
+input updateStudentInput {
+  clientMutationId: String
+  id: ID
+  person: embedPersonInput
+  personUnlink: embedPersonInput
+  personCreate: createPersonInput
+  group: embedGroupInput
+  groupUnlink: embedGroupInput
+  groupCreate: createGroupInput
+}
+
+# Payload type for Student
+type updateStudentPayload {
+  clientMutationId: String
+  viewer: Viewer
+  student: Student
+}
+
+# input type for Student
+input deleteStudentInput {
+  clientMutationId: String
+  id: ID
+}
+
+# Payload type for Student
+type deleteStudentPayload {
+  clientMutationId: String
+  viewer: Viewer
+  deletedItemId: ID
+  student: Student
+}

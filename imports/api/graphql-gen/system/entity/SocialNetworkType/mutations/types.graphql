@@ -1,0 +1,50 @@
+# Input types for basic CUD
+
+# input type for SocialNetworkType
+input createSocialNetworkTypeInput {
+  clientMutationId: String
+  id: ID
+  name: String!
+}
+
+input embedSocialNetworkTypeInput {
+  clientMutationId: String
+  id: ID
+  name: String
+}
+
+# Payload type for SocialNetworkType
+type createSocialNetworkTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  socialNetworkType: SocialNetworkTypesEdge
+}
+
+# input type for SocialNetworkType
+input updateSocialNetworkTypeInput {
+  clientMutationId: String
+  id: ID
+  name: String
+}
+
+# Payload type for SocialNetworkType
+type updateSocialNetworkTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  socialNetworkType: SocialNetworkType
+}
+
+# input type for SocialNetworkType
+input deleteSocialNetworkTypeInput {
+  clientMutationId: String
+  id: ID
+  name: String
+}
+
+# Payload type for SocialNetworkType
+type deleteSocialNetworkTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  deletedItemId: ID
+  socialNetworkType: SocialNetworkType
+}

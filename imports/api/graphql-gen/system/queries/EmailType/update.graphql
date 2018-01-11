@@ -1,0 +1,10 @@
+
+# Update EmailType
+mutation updateEmailType($emailType: updateEmailTypeInput!){
+  updateEmailType(input:$emailType){
+    emailType {
+      id
+    }
+  }
+}
+

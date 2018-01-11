@@ -1,0 +1,83 @@
+
+# # Person Role To Be User Identified In The System
+
+
+input EmbedUserFilter {
+  or: [EmbedUserFilterItem]
+  and: [EmbedUserFilterItem]
+  some: UserFilter
+  none: UserFilter
+  every: UserFilter
+}
+
+input EmbedUserFilterItem {
+  some: UserFilter
+  none: UserFilter
+  every: UserFilter
+}
+
+input UserFilter {
+  or: [UserFilterItem]
+  and: [UserFilterItem]
+  userName: WhereString
+  password: WhereString
+  isAdmin: WhereBoolean
+  isSystem: WhereBoolean
+  enabled: WhereBoolean
+  id: WhereID
+}
+
+input UserComplexFilter {
+  or: [UserComplexFilter]
+  and: [UserComplexFilter]
+  userName: WhereString
+  password: WhereString
+  isAdmin: WhereBoolean
+  isSystem: WhereBoolean
+  enabled: WhereBoolean
+  id: WhereID
+}
+
+input UserFilterItem {
+  userName: WhereString
+  password: WhereString
+  isAdmin: WhereBoolean
+  isSystem: WhereBoolean
+  enabled: WhereBoolean
+  id: WhereID
+}
+
+input UserFilterSubscriptionsItem {
+  userName: WhereString
+  password: WhereString
+  isAdmin: WhereBoolean
+  isSystem: WhereBoolean
+  enabled: WhereBoolean
+  id: WhereID
+}
+
+input UserFilterSubscriptions {
+  or: [UserFilterSubscriptions]
+  and: [UserFilterSubscriptions]
+  mutation: WhereMutationKind
+  node: UserFilterSubscriptionsItem
+  previous: UserFilterSubscriptionsItem
+  updatedFields: WhereListOfStrings
+}
+
+type User implements Node{
+  # # User Name
+  userName: String!
+  # # Password
+  password: String!
+  # # Is Admin
+  isAdmin: Boolean
+  # # Is System
+  isSystem: Boolean
+  # # Enabled
+  enabled: Boolean
+  # # Id
+  id: ID!
+}
+
+

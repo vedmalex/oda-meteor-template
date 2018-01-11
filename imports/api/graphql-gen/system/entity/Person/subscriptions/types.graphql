@@ -1,0 +1,82 @@
+# Input types for basic CUD
+
+# input type for Person
+
+type UpdatePersonSubscriptionPayload {
+
+  id: ID
+  spiritualName: String
+  fullName: String
+  dateOfBirth: Date
+  specialNotes: String
+}
+
+type PersonSubscription {
+  mutation: MutationKind!
+  node: Person!
+  payload: PersonSubscriptionPayload
+  updatedFields: [String]
+  previous: UpdatePersonSubscriptionPayload
+}
+
+type PersonBelongsToUserArgsSubscriptionPayload {
+  person:ID!
+  user:ID!
+}
+
+type PersonBelongsToUserSubscriptionPayload {
+  args:PersonBelongsToUserArgsSubscriptionPayload
+  relation: String
+}
+
+type PersonHasManySocialNetworksArgsSubscriptionPayload {
+  person:ID!
+  socialNetwork:ID!
+}
+
+type PersonHasManySocialNetworksSubscriptionPayload {
+  args:PersonHasManySocialNetworksArgsSubscriptionPayload
+  relation: String
+}
+
+type PersonHasManyPhonesArgsSubscriptionPayload {
+  person:ID!
+  phone:ID!
+}
+
+type PersonHasManyPhonesSubscriptionPayload {
+  args:PersonHasManyPhonesArgsSubscriptionPayload
+  relation: String
+}
+
+type PersonHasManyEmailsArgsSubscriptionPayload {
+  person:ID!
+  email:ID!
+}
+
+type PersonHasManyEmailsSubscriptionPayload {
+  args:PersonHasManyEmailsArgsSubscriptionPayload
+  relation: String
+}
+
+type PersonHasManyAsStudentsArgsSubscriptionPayload {
+  person:ID!
+  student:ID!
+}
+
+type PersonHasManyAsStudentsSubscriptionPayload {
+  args:PersonHasManyAsStudentsArgsSubscriptionPayload
+  relation: String
+}
+
+type PersonHasOneAsCuratorArgsSubscriptionPayload {
+  person:ID!
+  curator:ID!
+}
+
+type PersonHasOneAsCuratorSubscriptionPayload {
+  args:PersonHasOneAsCuratorArgsSubscriptionPayload
+  relation: String
+}
+
+union PersonSubscriptionPayload = UpdatePersonSubscriptionPayload | PersonBelongsToUserSubscriptionPayload | PersonHasManySocialNetworksSubscriptionPayload | PersonHasManyPhonesSubscriptionPayload | PersonHasManyEmailsSubscriptionPayload | PersonHasManyAsStudentsSubscriptionPayload | PersonHasOneAsCuratorSubscriptionPayload

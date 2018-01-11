@@ -1,0 +1,3 @@
+createGroup(input: createGroupInput!): createGroupPayload
+updateGroup(input: updateGroupInput!): updateGroupPayload
+deleteGroup(input: deleteGroupInput!): deleteGroupPayload

@@ -1,0 +1,12 @@
+
+# List of PhoneTypes
+query PhoneTypes {
+  PhoneType: phoneTypes @_(get: "edges"){
+    edges @_(map: "node"){
+      node{
+        ...ViewPhoneTypeFull
+      }
+    }
+  }
+}
+

@@ -1,0 +1,13 @@
+type StudentsConnection {
+  pageInfo: PageInfo!
+  edges: [StudentsEdge]
+  # put here your additional connection fields
+}
+
+type StudentsEdge {
+  node: Student
+  cursor: String!
+  # put here your additiona edge fields
+}
+
+

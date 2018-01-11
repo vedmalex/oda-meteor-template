@@ -1,0 +1,12 @@
+
+# List of SocialNetworkTypes
+query SocialNetworkTypes {
+  SocialNetworkType: socialNetworkTypes @_(get: "edges"){
+    edges @_(map: "node"){
+      node{
+        ...ViewSocialNetworkTypeFull
+      }
+    }
+  }
+}
+

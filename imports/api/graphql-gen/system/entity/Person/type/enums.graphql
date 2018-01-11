@@ -1,0 +1,12 @@
+enum PersonSortOrder {
+  spiritualNameAsc
+  spiritualNameDesc
+  fullNameAsc
+  fullNameDesc
+  dateOfBirthAsc
+  dateOfBirthDesc
+  specialNotesAsc
+  specialNotesDesc
+  idAsc
+  idDesc
+}

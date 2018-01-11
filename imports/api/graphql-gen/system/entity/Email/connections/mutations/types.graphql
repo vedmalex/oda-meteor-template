@@ -1,0 +1,50 @@
+
+input addToEmailBelongsToTypeInput {
+  clientMutationId: String
+  email:ID!
+  emailType:ID!
+  #additional Edge fields
+}
+
+type addToEmailBelongsToTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  email: Email
+ }
+
+input removeFromEmailBelongsToTypeInput {
+  clientMutationId: String
+  emailType:ID!
+  email:ID!
+ }
+
+type removeFromEmailBelongsToTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  email: Email
+ }
+
+input addToEmailBelongsToPersonInput {
+  clientMutationId: String
+  email:ID!
+  person:ID!
+  #additional Edge fields
+}
+
+type addToEmailBelongsToPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  email: Email
+ }
+
+input removeFromEmailBelongsToPersonInput {
+  clientMutationId: String
+  person:ID!
+  email:ID!
+ }
+
+type removeFromEmailBelongsToPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  email: Email
+ }

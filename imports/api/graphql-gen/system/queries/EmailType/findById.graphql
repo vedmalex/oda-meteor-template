@@ -1,0 +1,6 @@
+
+query findEmailTypeById( $id: ID) {
+  emailType(id:$id) {
+    ...ViewEmailTypeFull
+  }
+}

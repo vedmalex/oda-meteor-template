@@ -1,0 +1,13 @@
+type SocialNetworksConnection {
+  pageInfo: PageInfo!
+  edges: [SocialNetworksEdge]
+  # put here your additional connection fields
+}
+
+type SocialNetworksEdge {
+  node: SocialNetwork
+  cursor: String!
+  # put here your additiona edge fields
+}
+
+

@@ -1,0 +1,65 @@
+type PeopleConnection {
+  pageInfo: PageInfo!
+  edges: [PeopleEdge]
+  # put here your additional connection fields
+}
+
+type PeopleEdge {
+  node: Person
+  cursor: String!
+  # put here your additiona edge fields
+}
+
+
+
+type PersonHasManySocialNetworksConnection {
+  pageInfo: PageInfo!
+  edges: [PersonHasManySocialNetworksEdge]
+  # put here your additional connection fields
+}
+
+type PersonHasManySocialNetworksEdge {
+  node: SocialNetwork
+  cursor: String!
+  # put here your additiona edge fields
+}
+
+
+type PersonHasManyPhonesConnection {
+  pageInfo: PageInfo!
+  edges: [PersonHasManyPhonesEdge]
+  # put here your additional connection fields
+}
+
+type PersonHasManyPhonesEdge {
+  node: Phone
+  cursor: String!
+  # put here your additiona edge fields
+}
+
+
+type PersonHasManyEmailsConnection {
+  pageInfo: PageInfo!
+  edges: [PersonHasManyEmailsEdge]
+  # put here your additional connection fields
+}
+
+type PersonHasManyEmailsEdge {
+  node: Email
+  cursor: String!
+  # put here your additiona edge fields
+}
+
+
+type PersonHasManyAsStudentsConnection {
+  pageInfo: PageInfo!
+  edges: [PersonHasManyAsStudentsEdge]
+  # put here your additional connection fields
+}
+
+type PersonHasManyAsStudentsEdge {
+  node: Student
+  cursor: String!
+  # put here your additiona edge fields
+}
+

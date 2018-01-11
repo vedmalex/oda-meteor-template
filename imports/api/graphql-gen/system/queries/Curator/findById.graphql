@@ -1,0 +1,6 @@
+
+query findCuratorById( $id: ID) {
+  curator(id:$id) {
+    ...ViewCuratorFull
+  }
+}

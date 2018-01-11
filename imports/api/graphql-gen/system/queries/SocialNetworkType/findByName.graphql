@@ -1,0 +1,6 @@
+
+query findSocialNetworkTypeByName( $name: String) {
+  socialNetworkType(name:$name) {
+    ...ViewSocialNetworkTypeFull
+  }
+}

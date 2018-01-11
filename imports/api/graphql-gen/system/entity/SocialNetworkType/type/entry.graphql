@@ -1,0 +1,59 @@
+
+# # Social Network Type
+
+
+input EmbedSocialNetworkTypeFilter {
+  or: [EmbedSocialNetworkTypeFilterItem]
+  and: [EmbedSocialNetworkTypeFilterItem]
+  some: SocialNetworkTypeFilter
+  none: SocialNetworkTypeFilter
+  every: SocialNetworkTypeFilter
+}
+
+input EmbedSocialNetworkTypeFilterItem {
+  some: SocialNetworkTypeFilter
+  none: SocialNetworkTypeFilter
+  every: SocialNetworkTypeFilter
+}
+
+input SocialNetworkTypeFilter {
+  or: [SocialNetworkTypeFilterItem]
+  and: [SocialNetworkTypeFilterItem]
+  name: WhereString
+  id: WhereID
+}
+
+input SocialNetworkTypeComplexFilter {
+  or: [SocialNetworkTypeComplexFilter]
+  and: [SocialNetworkTypeComplexFilter]
+  name: WhereString
+  id: WhereID
+}
+
+input SocialNetworkTypeFilterItem {
+  name: WhereString
+  id: WhereID
+}
+
+input SocialNetworkTypeFilterSubscriptionsItem {
+  name: WhereString
+  id: WhereID
+}
+
+input SocialNetworkTypeFilterSubscriptions {
+  or: [SocialNetworkTypeFilterSubscriptions]
+  and: [SocialNetworkTypeFilterSubscriptions]
+  mutation: WhereMutationKind
+  node: SocialNetworkTypeFilterSubscriptionsItem
+  previous: SocialNetworkTypeFilterSubscriptionsItem
+  updatedFields: WhereListOfStrings
+}
+
+type SocialNetworkType implements Node{
+  # # Name
+  name: String!
+  # # Id
+  id: ID!
+}
+
+

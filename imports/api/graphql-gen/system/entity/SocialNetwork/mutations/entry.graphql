@@ -1,0 +1,3 @@
+createSocialNetwork(input: createSocialNetworkInput!): createSocialNetworkPayload
+updateSocialNetwork(input: updateSocialNetworkInput!): updateSocialNetworkPayload
+deleteSocialNetwork(input: deleteSocialNetworkInput!): deleteSocialNetworkPayload

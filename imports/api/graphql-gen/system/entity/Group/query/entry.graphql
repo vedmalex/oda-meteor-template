@@ -1,0 +1,3 @@
+  groups( after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [GroupSortOrder], filter: GroupComplexFilter): GroupsConnection
+
+  group(id: ID, name: String): Group

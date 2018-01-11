@@ -1,0 +1,10 @@
+
+# Update SocialNetworkType
+mutation updateSocialNetworkType($socialNetworkType: updateSocialNetworkTypeInput!){
+  updateSocialNetworkType(input:$socialNetworkType){
+    socialNetworkType {
+      id
+    }
+  }
+}
+

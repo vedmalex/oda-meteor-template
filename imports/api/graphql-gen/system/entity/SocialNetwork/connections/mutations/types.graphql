@@ -1,0 +1,50 @@
+
+input addToSocialNetworkBelongsToTypeInput {
+  clientMutationId: String
+  socialNetwork:ID!
+  socialNetworkType:ID!
+  #additional Edge fields
+}
+
+type addToSocialNetworkBelongsToTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  socialNetwork: SocialNetwork
+ }
+
+input removeFromSocialNetworkBelongsToTypeInput {
+  clientMutationId: String
+  socialNetworkType:ID!
+  socialNetwork:ID!
+ }
+
+type removeFromSocialNetworkBelongsToTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  socialNetwork: SocialNetwork
+ }
+
+input addToSocialNetworkBelongsToPersonInput {
+  clientMutationId: String
+  socialNetwork:ID!
+  person:ID!
+  #additional Edge fields
+}
+
+type addToSocialNetworkBelongsToPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  socialNetwork: SocialNetwork
+ }
+
+input removeFromSocialNetworkBelongsToPersonInput {
+  clientMutationId: String
+  person:ID!
+  socialNetwork:ID!
+ }
+
+type removeFromSocialNetworkBelongsToPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  socialNetwork: SocialNetwork
+ }

@@ -1,0 +1,3 @@
+createStudent(input: createStudentInput!): createStudentPayload
+updateStudent(input: updateStudentInput!): updateStudentPayload
+deleteStudent(input: deleteStudentInput!): deleteStudentPayload

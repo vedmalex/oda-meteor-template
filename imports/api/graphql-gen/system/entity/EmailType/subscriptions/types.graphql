@@ -1,0 +1,17 @@
+# Input types for basic CUD
+
+# input type for EmailType
+
+type EmailTypeSubscriptionPayload {
+
+  id: ID
+  name: String
+}
+
+type EmailTypeSubscription {
+  mutation: MutationKind!
+  node: EmailType!
+  payload: EmailTypeSubscriptionPayload
+  updatedFields: [String]
+  previous: EmailTypeSubscriptionPayload
+}

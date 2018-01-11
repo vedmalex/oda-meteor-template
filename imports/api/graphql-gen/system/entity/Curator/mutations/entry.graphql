@@ -1,0 +1,3 @@
+createCurator(input: createCuratorInput!): createCuratorPayload
+updateCurator(input: updateCuratorInput!): updateCuratorPayload
+deleteCurator(input: deleteCuratorInput!): deleteCuratorPayload

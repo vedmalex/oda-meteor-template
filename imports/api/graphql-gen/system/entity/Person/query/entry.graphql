@@ -1,0 +1,3 @@
+  people( after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [PersonSortOrder], filter: PersonComplexFilter): PeopleConnection
+
+  person(id: ID, spiritualName: String, fullName: String): Person

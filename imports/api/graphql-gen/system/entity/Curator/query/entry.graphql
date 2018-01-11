@@ -1,0 +1,3 @@
+  curators( after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [CuratorSortOrder], filter: CuratorComplexFilter): CuratorsConnection
+
+  curator(id: ID): Curator

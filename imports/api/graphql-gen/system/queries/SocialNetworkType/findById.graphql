@@ -1,0 +1,6 @@
+
+query findSocialNetworkTypeById( $id: ID) {
+  socialNetworkType(id:$id) {
+    ...ViewSocialNetworkTypeFull
+  }
+}

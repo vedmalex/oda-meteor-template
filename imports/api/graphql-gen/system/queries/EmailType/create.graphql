@@ -1,0 +1,12 @@
+
+# Create EmailType
+mutation createEmailType($emailType: createEmailTypeInput!){
+  createEmailType(input:$emailType){
+    emailType {
+      node {
+        id
+      }
+    }
+  }
+}
+

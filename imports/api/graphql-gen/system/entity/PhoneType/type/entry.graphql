@@ -1,0 +1,59 @@
+
+# # Phone Type
+
+
+input EmbedPhoneTypeFilter {
+  or: [EmbedPhoneTypeFilterItem]
+  and: [EmbedPhoneTypeFilterItem]
+  some: PhoneTypeFilter
+  none: PhoneTypeFilter
+  every: PhoneTypeFilter
+}
+
+input EmbedPhoneTypeFilterItem {
+  some: PhoneTypeFilter
+  none: PhoneTypeFilter
+  every: PhoneTypeFilter
+}
+
+input PhoneTypeFilter {
+  or: [PhoneTypeFilterItem]
+  and: [PhoneTypeFilterItem]
+  name: WhereString
+  id: WhereID
+}
+
+input PhoneTypeComplexFilter {
+  or: [PhoneTypeComplexFilter]
+  and: [PhoneTypeComplexFilter]
+  name: WhereString
+  id: WhereID
+}
+
+input PhoneTypeFilterItem {
+  name: WhereString
+  id: WhereID
+}
+
+input PhoneTypeFilterSubscriptionsItem {
+  name: WhereString
+  id: WhereID
+}
+
+input PhoneTypeFilterSubscriptions {
+  or: [PhoneTypeFilterSubscriptions]
+  and: [PhoneTypeFilterSubscriptions]
+  mutation: WhereMutationKind
+  node: PhoneTypeFilterSubscriptionsItem
+  previous: PhoneTypeFilterSubscriptionsItem
+  updatedFields: WhereListOfStrings
+}
+
+type PhoneType implements Node{
+  # # Name
+  name: String!
+  # # Id
+  id: ID!
+}
+
+

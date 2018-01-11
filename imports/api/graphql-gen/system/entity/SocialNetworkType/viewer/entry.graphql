@@ -1,0 +1,2 @@
+  socialNetworkTypes( after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [SocialNetworkTypeSortOrder], filter: SocialNetworkTypeFilter): SocialNetworkTypesConnection
+  socialNetworkType(id: ID, name: String): SocialNetworkType

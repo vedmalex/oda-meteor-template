@@ -1,0 +1,50 @@
+
+input addToPhoneBelongsToTypeInput {
+  clientMutationId: String
+  phone:ID!
+  phoneType:ID!
+  #additional Edge fields
+}
+
+type addToPhoneBelongsToTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  phone: Phone
+ }
+
+input removeFromPhoneBelongsToTypeInput {
+  clientMutationId: String
+  phoneType:ID!
+  phone:ID!
+ }
+
+type removeFromPhoneBelongsToTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  phone: Phone
+ }
+
+input addToPhoneBelongsToPersonInput {
+  clientMutationId: String
+  phone:ID!
+  person:ID!
+  #additional Edge fields
+}
+
+type addToPhoneBelongsToPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  phone: Phone
+ }
+
+input removeFromPhoneBelongsToPersonInput {
+  clientMutationId: String
+  person:ID!
+  phone:ID!
+ }
+
+type removeFromPhoneBelongsToPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  phone: Phone
+ }

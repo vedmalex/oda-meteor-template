@@ -1,0 +1,17 @@
+# Input types for basic CUD
+
+# input type for PhoneType
+
+type PhoneTypeSubscriptionPayload {
+
+  id: ID
+  name: String
+}
+
+type PhoneTypeSubscription {
+  mutation: MutationKind!
+  node: PhoneType!
+  payload: PhoneTypeSubscriptionPayload
+  updatedFields: [String]
+  previous: PhoneTypeSubscriptionPayload
+}

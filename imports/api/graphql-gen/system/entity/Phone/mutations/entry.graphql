@@ -1,0 +1,3 @@
+createPhone(input: createPhoneInput!): createPhonePayload
+updatePhone(input: updatePhoneInput!): updatePhonePayload
+deletePhone(input: deletePhoneInput!): deletePhonePayload

@@ -1,0 +1,50 @@
+
+input addToStudentBelongsToPersonInput {
+  clientMutationId: String
+  student:ID!
+  person:ID!
+  #additional Edge fields
+}
+
+type addToStudentBelongsToPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  student: Student
+ }
+
+input removeFromStudentBelongsToPersonInput {
+  clientMutationId: String
+  person:ID!
+  student:ID!
+ }
+
+type removeFromStudentBelongsToPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  student: Student
+ }
+
+input addToStudentBelongsToGroupInput {
+  clientMutationId: String
+  student:ID!
+  group:ID!
+  #additional Edge fields
+}
+
+type addToStudentBelongsToGroupPayload {
+  clientMutationId: String
+  viewer: Viewer
+  student: Student
+ }
+
+input removeFromStudentBelongsToGroupInput {
+  clientMutationId: String
+  group:ID!
+  student:ID!
+ }
+
+type removeFromStudentBelongsToGroupPayload {
+  clientMutationId: String
+  viewer: Viewer
+  student: Student
+ }

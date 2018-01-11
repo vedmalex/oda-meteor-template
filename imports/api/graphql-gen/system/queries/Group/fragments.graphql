@@ -1,0 +1,32 @@
+
+# fragments for single unique keys
+fragment EmbedGroupWithId on Group {
+  id
+}
+fragment EmbedGroupWithName on Group {
+  name
+}
+
+
+# fragments on entity
+fragment ViewGroup on Group {
+  id
+  name
+}
+
+fragment ViewGroupFull on Group {
+  id
+  name
+  students @_(get: "edges"){
+    edges @_(map: "node"){
+      node {
+        ...EmbedStudentWithId
+      }
+    }
+  }
+  curator {
+    ...EmbedCuratorWithId
+  }
+}
+
+

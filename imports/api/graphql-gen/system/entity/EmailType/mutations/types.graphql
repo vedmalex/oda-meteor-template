@@ -1,0 +1,50 @@
+# Input types for basic CUD
+
+# input type for EmailType
+input createEmailTypeInput {
+  clientMutationId: String
+  id: ID
+  name: String!
+}
+
+input embedEmailTypeInput {
+  clientMutationId: String
+  id: ID
+  name: String
+}
+
+# Payload type for EmailType
+type createEmailTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  emailType: EmailTypesEdge
+}
+
+# input type for EmailType
+input updateEmailTypeInput {
+  clientMutationId: String
+  id: ID
+  name: String
+}
+
+# Payload type for EmailType
+type updateEmailTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  emailType: EmailType
+}
+
+# input type for EmailType
+input deleteEmailTypeInput {
+  clientMutationId: String
+  id: ID
+  name: String
+}
+
+# Payload type for EmailType
+type deleteEmailTypePayload {
+  clientMutationId: String
+  viewer: Viewer
+  deletedItemId: ID
+  emailType: EmailType
+}

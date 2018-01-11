@@ -1,0 +1,8 @@
+enum SocialNetworkSortOrder {
+  accountAsc
+  accountDesc
+  urlAsc
+  urlDesc
+  idAsc
+  idDesc
+}

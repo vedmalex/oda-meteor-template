@@ -1,0 +1,17 @@
+# Input types for basic CUD
+
+# input type for SocialNetworkType
+
+type SocialNetworkTypeSubscriptionPayload {
+
+  id: ID
+  name: String
+}
+
+type SocialNetworkTypeSubscription {
+  mutation: MutationKind!
+  node: SocialNetworkType!
+  payload: SocialNetworkTypeSubscriptionPayload
+  updatedFields: [String]
+  previous: SocialNetworkTypeSubscriptionPayload
+}

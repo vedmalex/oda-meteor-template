@@ -1,0 +1,6 @@
+
+query findPersonById( $id: ID) {
+  person(id:$id) {
+    ...ViewPersonFull
+  }
+}

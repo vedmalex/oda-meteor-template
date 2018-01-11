@@ -1,0 +1,22 @@
+
+# fragments for single unique keys
+fragment EmbedPhoneTypeWithId on PhoneType {
+  id
+}
+fragment EmbedPhoneTypeWithName on PhoneType {
+  name
+}
+
+
+# fragments on entity
+fragment ViewPhoneType on PhoneType {
+  id
+  name
+}
+
+fragment ViewPhoneTypeFull on PhoneType {
+  id
+  name
+}
+
+

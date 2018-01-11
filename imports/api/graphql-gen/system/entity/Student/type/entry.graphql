@@ -1,0 +1,67 @@
+
+# # Person Role To Be Student
+
+
+input EmbedStudentFilter {
+  or: [EmbedStudentFilterItem]
+  and: [EmbedStudentFilterItem]
+  some: StudentFilter
+  none: StudentFilter
+  every: StudentFilter
+}
+
+input EmbedStudentFilterItem {
+  some: StudentFilter
+  none: StudentFilter
+  every: StudentFilter
+}
+
+input StudentFilter {
+  or: [StudentFilterItem]
+  and: [StudentFilterItem]
+  person: WhereID
+  group: WhereID
+  id: WhereID
+}
+
+input StudentComplexFilter {
+  or: [StudentComplexFilter]
+  and: [StudentComplexFilter]
+  person: WhereID
+  group: WhereID
+  id: WhereID
+}
+
+input StudentFilterItem {
+  person: WhereID
+  group: WhereID
+  id: WhereID
+}
+
+input StudentFilterSubscriptionsItem {
+  person: WhereID
+  group: WhereID
+  id: WhereID
+}
+
+input StudentFilterSubscriptions {
+  or: [StudentFilterSubscriptions]
+  and: [StudentFilterSubscriptions]
+  mutation: WhereMutationKind
+  node: StudentFilterSubscriptionsItem
+  previous: StudentFilterSubscriptionsItem
+  updatedFields: WhereListOfStrings
+}
+
+type Student implements Node{
+  # # Id
+  id: ID!
+  # # Person
+  person: Person
+
+  # # Group
+  group: Group
+
+}
+
+

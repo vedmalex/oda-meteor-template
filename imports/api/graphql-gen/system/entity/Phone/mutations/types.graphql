@@ -1,0 +1,60 @@
+# Input types for basic CUD
+
+# input type for Phone
+input createPhoneInput {
+  clientMutationId: String
+  id: ID
+  phoneNumber: String!
+  type: embedPhoneTypeInput
+  person: embedPersonInput
+}
+
+input embedPhoneInput {
+  clientMutationId: String
+  id: ID
+  phoneNumber: String
+  type: embedPhoneTypeInput
+  person: embedPersonInput
+}
+
+# Payload type for Phone
+type createPhonePayload {
+  clientMutationId: String
+  viewer: Viewer
+  phone: PhonesEdge
+}
+
+# input type for Phone
+input updatePhoneInput {
+  clientMutationId: String
+  id: ID
+  phoneNumber: String
+  type: embedPhoneTypeInput
+  typeUnlink: embedPhoneTypeInput
+  typeCreate: createPhoneTypeInput
+  person: embedPersonInput
+  personUnlink: embedPersonInput
+  personCreate: createPersonInput
+}
+
+# Payload type for Phone
+type updatePhonePayload {
+  clientMutationId: String
+  viewer: Viewer
+  phone: Phone
+}
+
+# input type for Phone
+input deletePhoneInput {
+  clientMutationId: String
+  id: ID
+  phoneNumber: String
+}
+
+# Payload type for Phone
+type deletePhonePayload {
+  clientMutationId: String
+  viewer: Viewer
+  deletedItemId: ID
+  phone: Phone
+}

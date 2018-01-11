@@ -1,0 +1,26 @@
+type CuratorsConnection {
+  pageInfo: PageInfo!
+  edges: [CuratorsEdge]
+  # put here your additional connection fields
+}
+
+type CuratorsEdge {
+  node: Curator
+  cursor: String!
+  # put here your additiona edge fields
+}
+
+
+
+type CuratorHasManyGroupsConnection {
+  pageInfo: PageInfo!
+  edges: [CuratorHasManyGroupsEdge]
+  # put here your additional connection fields
+}
+
+type CuratorHasManyGroupsEdge {
+  node: Group
+  cursor: String!
+  # put here your additiona edge fields
+}
+

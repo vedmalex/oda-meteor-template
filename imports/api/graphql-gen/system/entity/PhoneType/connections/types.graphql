@@ -1,0 +1,13 @@
+type PhoneTypesConnection {
+  pageInfo: PageInfo!
+  edges: [PhoneTypesEdge]
+  # put here your additional connection fields
+}
+
+type PhoneTypesEdge {
+  node: PhoneType
+  cursor: String!
+  # put here your additiona edge fields
+}
+
+

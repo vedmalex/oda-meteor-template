@@ -1,0 +1,6 @@
+enum PhoneSortOrder {
+  phoneNumberAsc
+  phoneNumberDesc
+  idAsc
+  idDesc
+}

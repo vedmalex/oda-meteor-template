@@ -1,0 +1,90 @@
+# Input types for basic CUD
+
+# input type for Person
+input createPersonInput {
+  clientMutationId: String
+  id: ID
+  spiritualName: String!
+  fullName: String!
+  dateOfBirth: Date
+  specialNotes: String
+  user: embedUserInput
+  socialNetworks: [embedSocialNetworkInput]
+  phones: [embedPhoneInput]
+  emails: [embedEmailInput]
+  asStudents: [embedStudentInput]
+  asCurator: embedCuratorInput
+}
+
+input embedPersonInput {
+  clientMutationId: String
+  id: ID
+  spiritualName: String
+  fullName: String
+  dateOfBirth: Date
+  specialNotes: String
+  user: embedUserInput
+  socialNetworks: [embedSocialNetworkInput]
+  phones: [embedPhoneInput]
+  emails: [embedEmailInput]
+  asStudents: [embedStudentInput]
+  asCurator: embedCuratorInput
+}
+
+# Payload type for Person
+type createPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: PeopleEdge
+}
+
+# input type for Person
+input updatePersonInput {
+  clientMutationId: String
+  id: ID
+  spiritualName: String
+  fullName: String
+  dateOfBirth: Date
+  specialNotes: String
+  user: embedUserInput
+  userUnlink: embedUserInput
+  userCreate: createUserInput
+  socialNetworks: [embedSocialNetworkInput]
+  socialNetworksUnlink: [embedSocialNetworkInput]
+  socialNetworksCreate: [createSocialNetworkInput]
+  phones: [embedPhoneInput]
+  phonesUnlink: [embedPhoneInput]
+  phonesCreate: [createPhoneInput]
+  emails: [embedEmailInput]
+  emailsUnlink: [embedEmailInput]
+  emailsCreate: [createEmailInput]
+  asStudents: [embedStudentInput]
+  asStudentsUnlink: [embedStudentInput]
+  asStudentsCreate: [createStudentInput]
+  asCurator: embedCuratorInput
+  asCuratorUnlink: embedCuratorInput
+  asCuratorCreate: createCuratorInput
+}
+
+# Payload type for Person
+type updatePersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  person: Person
+}
+
+# input type for Person
+input deletePersonInput {
+  clientMutationId: String
+  id: ID
+  spiritualName: String
+  fullName: String
+}
+
+# Payload type for Person
+type deletePersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  deletedItemId: ID
+  person: Person
+}

@@ -1,0 +1,2 @@
+  phoneTypes( after: String, first: Int, before: String, last: Int, limit: Int, skip: Int, orderBy: [PhoneTypeSortOrder], filter: PhoneTypeFilter): PhoneTypesConnection
+  phoneType(id: ID, name: String): PhoneType

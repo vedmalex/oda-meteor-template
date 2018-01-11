@@ -1,0 +1,12 @@
+
+# Create PhoneType
+mutation createPhoneType($phoneType: createPhoneTypeInput!){
+  createPhoneType(input:$phoneType){
+    phoneType {
+      node {
+        id
+      }
+    }
+  }
+}
+

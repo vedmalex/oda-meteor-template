@@ -1,0 +1,12 @@
+
+# Create SocialNetworkType
+mutation createSocialNetworkType($socialNetworkType: createSocialNetworkTypeInput!){
+  createSocialNetworkType(input:$socialNetworkType){
+    socialNetworkType {
+      node {
+        id
+      }
+    }
+  }
+}
+

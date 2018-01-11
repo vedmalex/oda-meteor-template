@@ -1,0 +1,6 @@
+enum SocialNetworkTypeSortOrder {
+  nameAsc
+  nameDesc
+  idAsc
+  idDesc
+}

@@ -1,0 +1,50 @@
+
+input addToCuratorBelongsToPersonInput {
+  clientMutationId: String
+  curator:ID!
+  person:ID!
+  #additional Edge fields
+}
+
+type addToCuratorBelongsToPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  curator: Curator
+ }
+
+input removeFromCuratorBelongsToPersonInput {
+  clientMutationId: String
+  person:ID!
+  curator:ID!
+ }
+
+type removeFromCuratorBelongsToPersonPayload {
+  clientMutationId: String
+  viewer: Viewer
+  curator: Curator
+ }
+
+input addToCuratorHasManyGroupsInput {
+  clientMutationId: String
+  curator:ID!
+  group:ID!
+  #additional Edge fields
+}
+
+type addToCuratorHasManyGroupsPayload {
+  clientMutationId: String
+  viewer: Viewer
+  curator: Curator
+ }
+
+input removeFromCuratorHasManyGroupsInput {
+  clientMutationId: String
+  group:ID!
+  curator:ID!
+ }
+
+type removeFromCuratorHasManyGroupsPayload {
+  clientMutationId: String
+  viewer: Viewer
+  curator: Curator
+ }
